@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -1144,8 +1144,8 @@
 
     <div class="nav-actions">
       <div class="lang-switch">
-        <button class="lang-btn active" id="btn-pt" onclick="setLanguage('pt')">PT</button>
-        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" id="btn-pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
       </div>
 
       <button class="btn-action" onclick="window.print()">
@@ -1581,7 +1581,7 @@
     }
 
     // Bilingual Engine
-    let currentLang = 'pt';
+    let currentLang = 'en';
     const translations = {
       pt: {
         nav_title: "Campo Missionário Unamar",
@@ -1643,7 +1643,7 @@
         ch4_eyebrow: "Capítulo 04 • Fruto Espiritual",
         ch4_title: "O Evangelho em Movimento: Família Andrade",
         test_badge: "Testemunho de Campo • Outubro/2026",
-        test_quote: ""Minha mãe quer muito visitar a igreja. Assim que inaugurar, vou levá-la comigo!"",
+        test_quote: '"Minha mãe quer muito visitar a igreja. Assim que inaugurar, vou levá-la comigo!"',
         test_desc: "Mesmo antes das portas estarem formalmente abertas, o testemunho de Andrade Host espelha a ação silenciosa e poderosa do Espírito Santo na vizinhança. O interesse genuíno de sua mãe em congregar reafirma a vocação da RCCG Unamar como um porto seguro de salvação e acolhimento familiar.",
         test_author: "Diálogo Pastoral: Thiago Vitalino & Andrade Host",
         inaug_title: "Rumo ao Culto Inaugural da Missão",
@@ -1732,7 +1732,7 @@
         ch4_eyebrow: "Chapter 04 • Spiritual Fruit",
         ch4_title: "Gospel in Motion: The Andrade Family",
         test_badge: "Field Testimony • October/2026",
-        test_quote: ""My mother is very eager to visit the church. As soon as it opens, I will bring her with me!"",
+        test_quote: '"My mother is very eager to visit the church. As soon as it opens, I will bring her with me!"',
         test_desc: "Even before our doors officially open, Andrade Host's testimony reflects the quiet, powerful work of the Holy Spirit. His mother's heartfelt desire to worship confirms RCCG Unamar's calling as a haven of salvation and family restoration.",
         test_author: "Pastoral Conversation: Thiago Vitalino & Andrade Host",
         inaug_title: "Countdown to the Inaugural Service",
@@ -1777,6 +1777,9 @@
       });
       document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
     }
+      document.addEventListener('DOMContentLoaded', () => {
+      setLanguage('en');
+    });
   </script>
 </body>
 </html>
